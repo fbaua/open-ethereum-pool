@@ -15,22 +15,22 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//example.net/',
+      ApiUrl: '//akroma.cryptobitpool.eu/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://example.net',
-      HttpPort: 8888,
+      HttpHost: 'http://akroma.cryptobitpool.eu',
+      HttpPort: 8822,
 
       // Stratum mining endpoint
-      StratumHost: 'example.net',
-      StratumPort: 8008,
+      StratumHost: 'akroma.cryptobitpool.eu',
+      StratumPort: 8002,
 
       // Fee and payout details
       PoolFee: '1%',
-      PayoutThreshold: '0.5 Ether',
+      PayoutThreshold: '0.5 Akroma',
 
       // For network hashrate (change for your favourite fork)
-      BlockTime: 14.4
+      BlockTime: 14.0
     }
   };
 
