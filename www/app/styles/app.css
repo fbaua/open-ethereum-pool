@@ -95,7 +95,7 @@ code {
 	color: #dadada;
 }
 .navbar-default .navbar-link:hover {
-	color: rgba(246, 143, 2, 0.5);
+	color: rgb(255,255,255)
 }
 
 @media (max-width: 767px) {
