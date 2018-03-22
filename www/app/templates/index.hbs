@@ -2,11 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <h1 style="font-size: 24px">
-          <strong>Open Ethereum Pool</strong>
-        </h1>
-        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run twice per day.<br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.
+        <!-- <table border=0><tr><td valign=top><img src="./logo.png" border="0" height="60px"></td><td valign=top><h3>&nbsp;&nbsp;<b>ELLA</b></h3></td></tr></table><br/> -->
+        <br/>
+        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run every 60m.<br/>
+        <span class="label label-success">PROP</span> Stable and profitable!<br/>
       </div>
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
@@ -30,18 +29,36 @@
   <div class="stats">
     <h4>Your Stats &amp; Payment History</h4>
     <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder="Enter Your Ethereum Address"}}
+      {{input value=cachedLogin class="form-control" placeholder="Enter Your Akroma Address"}}
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+        <button style="background-color: rgb(124, 190, 78); color: #fff;" class="btn" type="button" {{action 'lookup' cachedLogin}}>
           <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
         </button>
       </span>
     </div>
   </div>
   <div>
-    <hr/>
+    <h4>News / Updates:</h4>
     <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
+      <p> - </p>
+    </h4>
+    <h4 class="note note-info text-center">
+      <p><b>0 - 150 mh/s per rig (2b)</b></p><br/>
+      <p>Getwork</p><code>{{config.HttpHost}}:{{config.HttpPort}}</code><br/><br/>
+      <p>Stratum</p><code>{{config.StratumHost}}:{{config.StratumPort}}</code>
+    </h4>
+    <h4 class="note note-info text-center">
+      <p><b>150-800 mh/s / Nicehash per rig (4b)</b></p><br/>
+      <p>Getwork </p><code>{{config.HttpHost}}:8833</code><br/><br/>
+      <p>Stratum </p><code>{{config.StratumHost}}:8003</code>
+    </h4>
+    <h4 class="note note-info text-center">
+      <p><b>800+ mh/s / Nicehash per rig (9b)</b></p><br/>
+      <p>Getwork </p><code>{{config.HttpHost}}:8844</code><br/><br/>
+      <p>Stratum </p><code>{{config.StratumHost}}:8004</code>
+    </h4>
+    <h4 class="note note-info text-center">
+      <b>Support</b>: <a href="https://discord.gg/aRkgVv5">Akroma Discord</a>
     </h4>
   </div>
 </div>

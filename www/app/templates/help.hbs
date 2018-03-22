@@ -1,38 +1,91 @@
 <div class="container">
   <div class="page-header">
-    <h1>How To Mine</h1>
+    <h1>Help</h1>
   </div>
-  <p class="lead">In order to mine on this pool you need to have an
-    <a href="https://github.com/ethereum/webthree-umbrella/releases" rel="nofollow" target="_blank">ethminer</a> installation
-    pointed to<br/><code>{{config.HttpHost}}:{{config.HttpPort}}/YOUR_ETH_ADDRESS/RIG_ID</code>
-  </p>
-  <dl class="dl-horizontal">
-    <dt>YOUR_ETH_ADDRESS</dt>
-    <dd>This is your address for payouts, generate one with geth, or mine directly to exchange like
-      <a href="http://poloniex.com" rel="nofollow" target="_blank">Poloniex</a>
-      or <a href="http://bittrex.com" rel="nofollow" target="_blank">Bittrex</a>.<br/>
-      <strong>Example:</strong> <code>0xb85150eb365e7df0941f0cf08235f987ba91506a</code>.
-    </dd>
-    <dt>RIG_ID</dt>
-    <dd>
-      ID of your farm to distinguish it from your other rig. If you have just one rig, feel free to omit this param.
-      This param must be short alphanumeric string with optional dashes and underscores.<br/>
-      <strong>Example:</strong> <code>rig-1</code>
-    </dd>
-  </dl>
+
+  <h2>Wallet</h2>
   <p>
-    <strong>Full example:</strong>
-    <code>ethminer -F {{config.HttpHost}}:{{config.HttpPort}}/0xb85150eb365e7df0941f0cf08235f987ba91506a/myfarm -G --farm-recheck 200</code>.<br/>
-    <span class="label label-info">Hint:</span> If you are compiling ethminer from latest source, please also use
-      extra <code>--disable-submit-hashrate</code> option.
+    Get a wallet from here: <a href="https://wallet.akroma.io/">https://wallet.akroma.io/</a>
   </p>
 
-  <h4>Stratum Mining with Stratum Proxy for Ethereum</h4>
+  <h2>Helpful Links</h2>
+  <p>
+    <a href="https://akroma.io/">Website</a>
+    <a href="https://stats.akroma.io/">Stats</a>
+    <a href="https://akroma.io/explorer">Explorer</a>
+    <a href="https://github.com/akroma-project">Github</a>
+  </p>
+
+  <h2>Mining</h2>
+
+  <p class="lead">Mining with
+    <a href="https://github.com/ethereum-mining/ethminer/releases" rel="nofollow" target="_blank">Ethminer</a><br/>
+  </p>
+
+  <p>
+    <strong>Getwork OpenCL (AMD Cards):</strong>
+    <code>ethminer -F {{config.HttpHost}}:{{config.HttpPort}}/0x40d8975c66FBACe77399051cCd234FA1aD83fEdf/myfarm -G --farm-recheck 1000</code>
+<!--     <span class="label label-info">Hint:</span> If you are compiling ethminer from latest source, please also use
+      extra <code>--disable-submit-hashrate</code> option. -->
+  </p>
+  <p>
+    <strong>Stratum OpenCL (AMD Cards):</strong>
+    <code>ethminer -S {{config.StratumHost}}:{{config.StratumPort}} -SP 1 -O 0x40d8975c66FBACe77399051cCd234FA1aD83fEdf.myfarm -G --farm-recheck 1000</code>
+  </p>
+
+  <p>
+    <strong>Getwork CUDA (NVIDIA Cards):</strong>
+    <code>ethminer -F {{config.HttpHost}}:{{config.HttpPort}}/0x40d8975c66FBACe77399051cCd234FA1aD83fEdf/myfarm -U --farm-recheck 1000</code>
+  </p>
+  <p>
+    <strong>Stratum CUDA (NVIDIA Cards):</strong>
+    <code>ethminer -S {{config.StratumHost}}:{{config.StratumPort}} -SP 1 -O 0x40d8975c66FBACe77399051cCd234FA1aD83fEdf.myfarm -U --farm-recheck 1000</code>
+  </p>
+  <br/>
+
+  <p class="lead">Mining with
+    <a href="https://mega.nz/#F!O4YA2JgD!n2b4iSHQDruEsYUvTQP5_w" rel="nofollow" target="_blank">Claymore</a><br/>
+  </p>
+  <p>
+    <strong>Stratum</strong>
+    <code>EthDcrMiner64.exe -epool stratum+tcp://{{config.StratumHost}}:{{config.StratumPort}} -ewal 0x40d8975c66FBACe77399051cCd234FA1aD83fEdf  -epsw x -allpools 1 -allcoins exp -gser 2 -eworker x</code>
+  </p>
+  <br/>
+
+  <p class="lead">Mining with
+    <a href="https://github.com/ethash/eminer-release" rel="nofollow" target="_blank">Eminer</a><br/>
+  </p>
+  <p>
+    Eminer has a free to use <a href="https://cloud.eminer.net/register">cloud service</a> for stats!
+  </p>
+  <p>
+    <strong>Stratum</strong>
+    <code>eminer.exe {{config.StratumHost}}:{{config.StratumPort}} -U 0x40d8975c66FBACe77399051cCd234FA1aD83fEdf -P x --cloud-key {your-cloud-key} -intensity 48 -N {your-rig-name}</code>
+  </p>
+  <br/>
+
+  <p class="lead">Nicehash<br/></p>
+  <p>
+    <strong>Algorithm</strong>
+    <code>DaggerHashimoto</code>
+    <strong>Server</strong>
+    <code>{{config.StratumHost}}</code>
+    <strong>Port</strong>
+    <code>8004</code>
+    <strong>Username</strong>
+    <code>Your Wallet ID</code>
+    <strong>Password</strong>
+    <code>#</code>
+  </p>
+  <br/>
+  
+
+<!--   <h4>Stratum Mining with Stratum Proxy for Ethereum</h4>
   <p class="lead">Grab proxy from <a href="https://github.com/Atrides/eth-proxy" re="nofollow" target="_blank">eth-proxy GitHub repo</a>.</p>
   <p class="lead">Edit <code>eth-proxy.conf</code> and specify our pool's <code>HOST: {{config.StratumHost}}</code>, <code>PORT: {{config.StratumPort}}</code> and your <code>WALLET</code>.</p>
 
   <h4>Mining with Ether-Proxy</h4>
-  <p class="lead">Use stable release of <a href="https://github.com/sammy007/ether-proxy/releases" target="_blank">Ethereum Solo/Pool Mining Proxy</a>.</p>
+  <p class="lead">Use stable release of <a href="https://github.com/sammy007/ether-proxy/releases" target="_blank">Ethereum Solo/Pool Mining Proxy</a>.</p> -->
 
   <h4>Advice</h4>
   <p>CPU mining is not recommended.</p>
