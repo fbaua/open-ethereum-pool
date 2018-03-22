@@ -96,7 +96,7 @@
 	"payouts": {
 		"enabled": true,
 		"requirePeers": 1,
-		"interval": "120m",
+		"interval": "30m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s",
 		"address": "0x1ebeaa088ac2be8056a50baaf824b8ea59d29dd2",
