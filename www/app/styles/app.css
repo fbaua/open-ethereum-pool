@@ -107,7 +107,7 @@ code {
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
 		color: #ffffff;
-		background-color: rgb(124, 190, 78);
+		background-color: rgb(246, 143, 2);
 	}
 }
 
@@ -139,8 +139,8 @@ span.logo-3 {
 }
 
 .note-info {
-	background-color: rgba(200, 57, 107, 0.1); /*#E8F6FC;*/
-	border-color: rgb(124, 190, 78); /*#57b5e3;*/
+	background-color: rgba(246, 143, 2, 0.1); /*#E8F6FC;*/
+	border-color: rgb(246, 143, 2); /*#57b5e3;*/
 }
 
 .note-danger {
