@@ -4,7 +4,7 @@
 	"name": "main",
 
 	"proxy": {
-		"enabled": true,
+		"enabled": false,
 		"listen": "0.0.0.0:8822",
 		"limitHeadersSize": 1024,
 		"limitBodySize": 256,
@@ -47,7 +47,7 @@
 	},
 
 	"api": {
-		"enabled": true,
+		"enabled": false,
 		"purgeOnly": false,
 		"purgeInterval": "10m",
 		"listen": "0.0.0.0:8080",
@@ -81,13 +81,13 @@
 	},
 
 	"unlocker": {
-		"enabled": false,
-		"poolFee": 1.0,
-		"poolFeeAddress": "",
-		"donate": true,
+		"enabled": true,
+		"poolFee": 0.5,
+		"poolFeeAddress": "0x379b27c8b3446eba4d863246cdd124170a58d21e",
+		"donate": false,
 		"depth": 120,
 		"immatureDepth": 20,
-		"keepTxFees": false,
+		"keepTxFees": true,
 		"interval": "10m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s"
