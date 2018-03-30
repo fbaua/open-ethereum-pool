@@ -30,7 +30,7 @@ module.exports = function(environment) {
       PayoutThreshold: '0.5 EtherGem',
 
       // For network hashrate (change for your favourite fork)
-      BlockTime: 10.0
+      BlockTime: 13
     }
   };
 
