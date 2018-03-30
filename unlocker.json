@@ -1,6 +1,6 @@
 {
 	"threads": 1,
-	"coin": "aka",
+	"coin": "egem",
 	"name": "main",
 
 	"proxy": {
@@ -82,8 +82,8 @@
 
 	"unlocker": {
 		"enabled": true,
-		"poolFee": 0.5,
-		"poolFeeAddress": "0x379b27c8b3446eba4d863246cdd124170a58d21e",
+		"poolFee": 1,
+		"poolFeeAddress": "",
 		"donate": false,
 		"depth": 120,
 		"immatureDepth": 20,
