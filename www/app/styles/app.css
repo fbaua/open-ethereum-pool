@@ -72,17 +72,17 @@ code {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #ffffff;
-	background-color: rgb(246, 143, 2);
+	background-color: rgb(198, 240, 254); /* change this color */
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	color: #ffffff;
 	background-color: #69102b;
 }
 .navbar-default .navbar-toggle {
-	border-color: rgb(246, 143, 2);
+	border-color: rrgb(198, 240, 254); /* change this color */
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: rgb(246, 143, 2);
+	background-color: rgb(198, 240, 254); /* change this color */
 }
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #dadada;
@@ -107,7 +107,7 @@ code {
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
 		color: #ffffff;
-		background-color: rgb(246, 143, 2);
+		background-color: rgb(198, 240, 254); /* change this color*/
 	}
 }
 
@@ -139,8 +139,8 @@ span.logo-3 {
 }
 
 .note-info {
-	background-color: rgba(246, 143, 2, 0.1); /*#E8F6FC;*/
-	border-color: rgb(246, 143, 2); /*#57b5e3;*/
+	background-color: rgba(198, 240, 254, 0.2); /* change this color */
+	border-color: rgb(198, 240, 254); /* change this color */
 }
 
 .note-danger {
