@@ -2,6 +2,7 @@
 	"threads": 1,
 	"coin": "egem",
 	"name": "main",
+	"pplns": 5000,
 
 	"proxy": {
 		"enabled": false,
