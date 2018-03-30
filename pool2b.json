@@ -1,7 +1,8 @@
 {
 	"threads": 1,
-	"coin": "egem",
+	"coin": "egemtest",
 	"name": "main",
+	"pplns": 5000,
 
 	"proxy": {
 		"enabled": true,

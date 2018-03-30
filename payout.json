@@ -1,6 +1,6 @@
 {
 	"threads": 1,
-	"coin": "egem",
+	"coin": "egemtest",
 	"name": "main",
 	"pplns": 5000,
 
@@ -97,7 +97,7 @@
 	"payouts": {
 		"enabled": true,
 		"requirePeers": 1,
-		"interval": "30m",
+		"interval": "15m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s",
 		"address": "0xfef86af789c02785dd7d2b617f6b950291253313",
