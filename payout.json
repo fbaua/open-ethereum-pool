@@ -1,6 +1,6 @@
 {
 	"threads": 1,
-	"coin": "ethergem",
+	"coin": "ethergem2",
 	"name": "main",
 	"pplns": 5000,
 
@@ -105,7 +105,8 @@
 		"gasPrice": "50000000000",
 		"autoGas": true,
 		"threshold": 500000000,
-		"bgsave": false
+		"bgsave": false,
+		"concurrentTx": 10
 	},
 
 	"newrelicEnabled": false,
